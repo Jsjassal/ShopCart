@@ -1,0 +1,37 @@
+[
+  {
+    "image": "tide.jpg",
+    "name": "Tide Detergent",
+    "price": "$29.30"
+  },
+  {
+    "image": "starbucks.jpg",
+    "name": "Starbucks Cofee",
+    "price": "$3.00"
+  },
+  {
+    "image": "knorr.jpg",
+    "name": "Knoor Noodels",
+    "price": "$4.00"
+  },
+  {
+    "image": "natureValley.jpg",
+    "name": "Protien Bars",
+    "price": "$4.00"
+  },
+  {
+    "image": "dove.jpg",
+    "name": "Dove Men Care",
+    "price": "$6.30"
+  },
+  {
+    "image": "dove.jpg",
+    "name": "Dove Men Care",
+    "price": "$6.30"
+  },
+  {
+    "image": "kisses.jpg",
+    "name": "Kisses",
+    "price": "$3.30"
+  }
+]

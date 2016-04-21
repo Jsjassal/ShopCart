@@ -1,0 +1,12 @@
+git push -u origin master
+git config --global user.name "Srinivas Gopi"
+git config --global user.email "gopisri27@gmail.com"
+git config --global push.default matching 
+git config --global alias.co checkout
+
+SSH Key Setup
+ls -al ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "gopisri27@gmail.com"
+more ~/.ssh/id_rsa.pub
+git remote -v
+	

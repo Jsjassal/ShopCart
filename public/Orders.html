@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Orders</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<a class="topleft1corner" href="ChooseItems.html">Shop</a>
+		<a class="topleft2corner" href="Profile.html">Your Account</a>
+
+		<a class="topright1corner" href="Orders.html">Your Orders</a>
+		<a class="topright2corner" href="login.html">Log Out</a>
+		<div class="items" >
+			<h1>Orders</h1>
+			<div class="form" style="width:500px">
+
+					<div   style="width:100%">
+							<table id="orderTab" width="100%" >
+								<tr>
+									<th style="text-align:center">ORDER ID</th>
+									<th style="text-align:center">STATUS</th>
+								</tr>
+								<!-- <tr>
+									<td style="text-align:center"><div id="order1">ORD1001</div></td>
+									<td style="text-align:center"><img src="images/ready4Shipping.jpg" style="width:40px">&nbsp;&nbsp;&nbsp;&nbsp;Shipping</td>
+								</tr>
+								<tr>
+									<td style="text-align:center"><div id="order1">ORD1002</div></td>
+									<td style="text-align:center"><img src="images/shipping-icon.png" style="width:40px">&nbsp;&nbsp;&nbsp;&nbsp;Shipped</td>
+								</tr>
+								<tr>
+									<td style="text-align:center"><div id="order1">ORD1003</div></td>
+									<td style="text-align:center"> <img src="images/delivered-icon.jpg" style="width:40px">&nbsp;&nbsp;&nbsp;&nbsp;Delivered</td>
+								</tr>
+								<tr>
+									<td style="text-align:center"><div id="order1">ORD1004</div></td>
+									<td style="text-align:center"><img src="images/delivered-icon.jpg" style="width:40px">&nbsp;&nbsp;&nbsp;&nbsp;Delivered</td>
+								</tr> -->
+							</table>
+						</div>
+
+					<br><br>
+					<div style="width:200px; margin:0 auto;">
+					<button onclick="window.location.href='ChooseItems.html';">OK</button>
+					</div>
+			</div>
+		</div>
+		<script>
+			window.onload= function () {
+					var x = document.cookie;
+					console.log(x);
+					var hostname = location.origin;
+
+					// function getCookie(name) {
+					//   var value = "; " + document.cookie;
+					//   var parts = value.split("; " + name + "=");
+					//   if (parts.length == 2) return parts.pop().split(";").shift();
+					// }
+					
+					 $.ajax({
+					        url: "http://localhost:3000"+ "/orders/"  +  sessionStorage.getItem('userAccount'),
+					        method: "GET",
+					        contentType: "application/json",
+					         success: function(result){
+					         	//console.log(result);
+					         	for( var i = 0; i < result.length; i++ )
+								    {
+								        document.getElementById( 'orderTab' ).innerHTML +=
+								        // '<tr  id = "row' + i + '"><td style="width:33%">'+order[i].itemName+'</td><td  style="text-align:center;width:33%">'+order[i].price+'</td><td style="text-align:center;width:33%">'+order[i].quantity+'</td></tr>';
+								        	'<tr> <td style="text-align:center"><div>' 
+											+ result[i].id + 
+											'</div></td><td style="text-align:center"><img src="images/'
+											+ result[i].image +
+											'" style="width:40px">&nbsp;&nbsp;&nbsp;&nbsp;' 
+											+ result[i].status + 
+											'</td></tr>'
+								    }
+				    
+			            
+			         		},
+					         error(){
+					             alert('Error');
+					         }
+			    });
+
+			}		
+				
+				
+						
+								</script>
+	    <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Checkout</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<a class="topleft1corner" href="ChooseItems.html">Shop</a>
+		<a class="topleft2corner" href="Profile.html">Your Account</a>
+
+		<a class="topright1corner" href="Orders.html">Your Orders</a>
+		<a class="topright2corner" href="login.html">Log Out</a>
+
+		<div >
+			<h1>CHECKOUT</h1>
+			<div class="form" style="height:450px">
+					<div style="float:left; width:50%">
+						<table>
+							<tr>
+								<th colspan="3" cellspacing="5" cellpadding="5" style="text-align:center">PAYMENT METHOD</th>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td><input type="text" id="cardNumb" placeholder="Card Number" required></td>
+							</tr>
+							<tr>
+								<td><input type="text" id = "cardName" placeholder="Name" required></td>
+							</tr>
+							<tr>
+								<td>
+								<input type="text" style="width:49%;" id="month" placeholder="Month" required>
+								<input type="text" style="width:49%" id = "year" placeholder="Year" required></td>
+							</tr>
+							<tr>
+								<td><input type="text" style="width:49%;" id = "code" placeholder="Security code" required></td>
+							</tr>
+						</table>
+					</div>
+					<div style="float:right; width:50%">
+						<table>
+							<tr>
+								<th colspan="3" style="text-align:center">SHIPPING DETAILS</th>
+							</tr>
+							<tr><td>&nbsp;</td></tr>
+							<tr>
+								<td><input type="text" id="street" placeholder="Street Address" required></td>
+							</tr>
+							<tr>
+								<td>
+								<input type="text" style="width:49%;" placeholder="Add Line 2" >
+								<input type="text" style="width:49%" id="city" placeholder="City" required></td>
+							</tr>
+							<tr>
+								<td>
+								<input type="text" style="width:49%;" id="state" placeholder="State" required>
+								<input type="text" style="width:49%" id="zip" placeholder="Zip"></td>
+							</tr>
+							<tr>
+								<td><button onclick="proceedeToConfirm()">PROCEED</button></td>
+							</tr>
+						</table>
+					</div>
+			</div>
+		</div>
+	    <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="js/index.js"></script>
+  </body>
+</html>

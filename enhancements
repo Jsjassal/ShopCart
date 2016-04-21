@@ -1,0 +1,2 @@
+display authentication failures in login page-- > Show alert
+Redirect the user to login page after successfull user account creation--> CAll animate function

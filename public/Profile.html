@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>Profile</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<a class="topleft1corner" href="ChooseItems.html">Shop</a>
+		<a class="topleft2corner" href="Profile.html">Your Account</a>
+
+		<a class="topright1corner" href="Orders.html">Your Orders</a>
+		<a class="topright2corner" href="login.html">Log Out</a>
+		
+		<div class="items" >
+			<h1>Orders</h1>
+			<div class="form" style="width:500px">
+
+					<div   style="width:100%">
+							<table width="100%" >
+								<tr>
+									<th style="text-align:center">NAME</th>
+									<th style="text-align:center">EMAIL</th>
+								</tr>
+								<tr>
+									<td id= "pf-name" style="text-align:center">NAME</td>
+									<td id= "pf-email" style="text-align:center">email@abc.com</td>
+								</tr>
+
+							</table>
+						</div>
+
+					<br><br>
+					<div style="width:200px; margin:0 auto;">
+					<button onclick="window.location.href='ChooseItems.html'">OK</button>
+					</div>
+			</div>
+		</div>
+		<script>
+			window.onload= function () {
+					
+					
+					 $.ajax({
+					        url: "http://localhost:3000"+ "/profile/"  +  sessionStorage.getItem('userAccount'),
+					        method: "GET",
+					        contentType: "application/json",
+					         success: function(result){
+					         	console.log(result);
+					         	document.getElementById('pf-name').innerHTML =  result.name;
+					         	document.getElementById('pf-email').innerHTML =  result.email;
+			            
+			         		},
+					         error(){
+					             alert('Error');
+					         }
+			    });
+
+			}		
+				
+				
+						
+								</script>
+	    <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="js/index.js"></script>
+  </body>
+</html>

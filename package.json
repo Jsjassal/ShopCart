@@ -1,0 +1,17 @@
+{
+  "name": "shop-ez",
+  "version": "1.0.0",
+  "description": "Online Shooping Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node registration.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.3",
+    "node-persist": "0.0.6"
+  }
+}
